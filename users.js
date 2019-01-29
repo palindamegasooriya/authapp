@@ -71,18 +71,8 @@ User.passwordCheck(password,user.password,function (err,match) {
     if (err) throw err;
 
 if(match){
-
-    const token = jwt.sign(user,config.secret,{expiresIn:604800});
-    res.json(
-{state:true,
-    token:'bearer ' + token,
-    user:{
-     id:user._id,
-     username:user.username,
-     name:user.name,
-     empType:user.empType,
-     email:user.email
-
+res.json({state:true,msg:"user found"});
+   
     }
 });
 
