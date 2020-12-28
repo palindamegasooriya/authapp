@@ -23,7 +23,7 @@ require('./config/passport')(passport);
 
 
 
-
+//connectoion
 const connection=mongoose.connect('mongodb://localhost:27017/pali');
 if(connection){
     console.log('database connected')
